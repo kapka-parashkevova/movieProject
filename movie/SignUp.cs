@@ -25,13 +25,18 @@ namespace movie
 
         private void button2_Click(object sender, EventArgs e)
         {
-             if(textBox1.Text.Length < 9 || textBox2.Text.Length < 9 || !this.textBox4.Text.Contains('@') || !this.textBox4.Text.Contains('.'))
-          MessageBox.Show("Please try again");
-                    //   MessageBox.Show("The username must contain at least 8 characters.");
-        //   else if(textBox2.Text.Length < 9)
-         //   MessageBox.Show("The password must contain at least 8 characters.");
-          //   else if(!this.textBox4.Text.Contains('@') || !this.textBox4.Text.Contains('.'))
-          //      MessageBox.Show("This is not a valid e-mail. Please try again!");
+             if (textBox2.Text.Length < 9)
+            {
+                MessageBox.Show("The password must contain at least 8 characters.");
+            }
+          else   if (textBox1.Text.Length < 9)
+            {
+                MessageBox.Show("The username must contain at least 8 characters.");
+            }
+         else    if (!Regex.IsMatch(textBox4.Text, @"(@)"))
+            {
+                MessageBox.Show("The E-mail address is not a valid");
+            }
             else {
             try
             {

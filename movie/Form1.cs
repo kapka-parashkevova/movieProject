@@ -41,10 +41,14 @@ namespace movie
 
         private void button1_Click(object sender, EventArgs e) // sign in button
         {
-            if(textBox1.Text.Length < 9)
+            if (textBox2.Text.Length < 9)
+            {
+                MessageBox.Show("The password must contain at least 8 characters.");
+            }
+            if (textBox1.Text.Length < 9)
+            {
                 MessageBox.Show("The username must contain at least 8 characters.");
-           else if(textBox2.Text.Length < 9)
-            MessageBox.Show("The password must contain at least 8 characters.");
+            }
             else { 
             try
             {
