@@ -16,10 +16,12 @@ namespace movie
         public Form1()
         {
             InitializeComponent();
+             textBox2.PasswordChar = "*";
             // this.BackColor = Color.FromArgb(255, 232, 232); // this should be pink-ish'
             BackColor = Color.AliceBlue;
             conn.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source =D:\third\sixth_semester\УСП\movie\movie.mdb;
             Persist Security Info = False; ";
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)

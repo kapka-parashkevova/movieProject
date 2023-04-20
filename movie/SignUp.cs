@@ -20,6 +20,7 @@ namespace movie
         {
             InitializeComponent();
             BackColor = Color.AliceBlue;
+            textBox2.PasswordChar = "*";
         }
 
         private void button2_Click(object sender, EventArgs e)
